@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 interface ImageCarouselProps {
   images: string[]; // Array of image URLs
@@ -33,7 +32,7 @@ const ImageCarousel = ({
 
   // We need at least enough images to fill the visible height plus one more set for seamless looping
   const repeatedImages = [];
-  let currentHeight = 0;
+  const currentHeight = 0;
   const visibleHeightPx = parseInt(visibleHeight); // Assuming visibleHeight is in px for calculation
 
   // Create a long enough list of images for seamless looping

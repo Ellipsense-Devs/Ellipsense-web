@@ -6,8 +6,7 @@ import InfoSection from "@/components/sections/InfoSection";
 import AboutSection from "@/components/sections/AboutSection";
 import BlankSection from "@/components/sections/BlankSection";
 import VideoSection from "@/components/sections/VideoSection";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import CallToActionSection from "@/components/sections/CallToActionSection";
+
 import FooterSection from "@/components/sections/FooterSection";
 import Services from "@/components/sections/Services";
 
