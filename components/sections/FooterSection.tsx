@@ -38,7 +38,7 @@ const FooterSection = () => {
               </span>
             </Link>
             <p className="text-gray-400 leading-relaxed">
-              Let's build your vision together.
+              Let&apos;s build your vision together.
             </p>
           </div>
 
