@@ -1,7 +1,7 @@
 "use client";
 
 import AnimatedSection from "@/components/AnimatedSection";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useSpring } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
 
