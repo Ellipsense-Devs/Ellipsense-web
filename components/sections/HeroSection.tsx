@@ -30,7 +30,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative pt-32 min-h-screen p-4 overflow-hidden"
+      className="relative pt-40 min-h-screen p-4 overflow-hidden"
     >
       {" "}
       {/* Added relative and overflow-hidden */}

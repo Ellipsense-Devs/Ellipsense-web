@@ -6,20 +6,24 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 const AboutSection = () => {
   const features = [
-    "Expert Team",
-    "Tailored Solutions",
-    "Innovation-Driven",
-    "Customer-Focused",
+    "Expert and Experienced Team",
+    "Customer-Centric Approach",
+    "On-Time Project Delivery",
+    "Scalable and Secure Solutions",
   ];
 
   return (
     <AnimatedSection
       id="about"
-      className="py-20 bg-gray-50"
+      className="py-20 bg-gray-50 relative overflow-hidden"
       threshold={0.2}
       delay={0.2}
     >
-      <div className="max-w-7xl mx-auto px-4">
+      {/* Background Elements */}
+      <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-400/30 rounded-full filter blur-3xl animate-move1"></div>
+      <div className="absolute top-[-5%] right-[-5%] w-[400px] h-[400px] bg-green-400/30 rounded-full filter blur-3xl animate-move2"></div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -46,10 +50,10 @@ const AboutSection = () => {
             className="md:w-1/2 md:pl-12"
           >
             <h2 className="text-4xl font-bold text-[#691E75] mb-6">
-              About Elipsense
+              Why Choose Ellipsense
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Elipsense Tech Solution was founded with a mission to help
+              Ellipsense Tech Solution was founded with a mission to help
               businesses harness the power of technology to drive growth,
               improve efficiency, and maintain a competitive edge in rapidly
               evolving markets.

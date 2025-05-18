@@ -5,6 +5,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import InfoSection from "@/components/sections/InfoSection";
 import AboutSection from "@/components/sections/AboutSection";
 import BlankSection from "@/components/sections/BlankSection";
+import VideoSection from "@/components/sections/VideoSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import CallToActionSection from "@/components/sections/CallToActionSection";
 import FooterSection from "@/components/sections/FooterSection";
@@ -17,58 +18,21 @@ export default function Home() {
 
       <main>
         <HeroSection />
+
         <InfoSection />
         <AboutSection />
         <Services />
+        <VideoSection />
         <BlankSection />
+
         {/* <TestimonialsSection /> */}
-        <CallToActionSection />
+        {/* <CallToActionSection /> */}
       </main>
 
       <FooterSection />
 
       {/* Global styles for animations and 3D card effect */}
       <style jsx global>{`
-        @keyframes move1 {
-          0% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          25% {
-            transform: translate(20px, -10px) rotate(5deg);
-          }
-          50% {
-            transform: translate(30px, 20px) rotate(0deg);
-          }
-          75% {
-            transform: translate(10px, 30px) rotate(-5deg);
-          }
-          100% {
-            transform: translate(0px, 0px) rotate(0deg);
-          }
-        }
-        @keyframes move2 {
-          0% {
-            transform: translate(0, 0) rotate(0deg);
-          }
-          25% {
-            transform: translate(-30px, -15px) rotate(-5deg);
-          }
-          50% {
-            transform: translate(-40px, -20px) rotate(0deg);
-          }
-          75% {
-            transform: translate(-15px, -35px) rotate(5deg);
-          }
-          100% {
-            transform: translate(0px, 0px) rotate(0deg);
-          }
-        }
-        .animate-move1 {
-          animation: move1 22s ease-in-out infinite alternate;
-        }
-        .animate-move2 {
-          animation: move2 18s ease-in-out infinite alternate;
-        }
         .perspective-1000 {
           perspective: 1000px;
         }

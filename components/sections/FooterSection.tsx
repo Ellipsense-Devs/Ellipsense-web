@@ -10,18 +10,18 @@ const FooterSection = () => {
     { href: "/", label: "Home" },
     { href: "/#about", label: "About" },
     { href: "/#info", label: "Mission" },
-    { href: "/#testimonials", label: "Testimonials" },
+    { href: "/#services", label: "Services" },
   ];
 
   const servicesLinks = [
-    { href: "/services/custom-development", label: "Custom Development" }, // Example actual links
-    { href: "/services/web-applications", label: "Web Applications" },
-    { href: "/services/mobile-solutions", label: "Mobile Solutions" },
-    { href: "/services/digital-strategy", label: "Digital Strategy" },
+    { href: "/", label: "Custom Development" }, // Example actual links
+    { href: "/", label: "Web Applications" },
+    { href: "/", label: "Mobile Solutions" },
+    { href: "/", label: "Digital Strategy" },
   ];
 
   return (
-    <footer className="bg-gray-800 text-white py-16">
+    <footer id="footer" className="bg-gray-800 text-white py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Company Info */}
@@ -112,7 +112,7 @@ const FooterSection = () => {
                   href="mailto:info@elipsense.com"
                   className="hover:text-purple-300 transition-colors duration-200"
                 >
-                  info@elipsense.com
+                  franzeecalleja@gmail.com
                 </a>
               </li>
               <li className="flex items-start">
@@ -134,7 +134,7 @@ const FooterSection = () => {
                   href="tel:+15551234567"
                   className="hover:text-purple-300 transition-colors duration-200"
                 >
-                  +1 (555) 123-4567
+                  +639946948997
                 </a>
               </li>
               <li className="flex items-start">
@@ -157,11 +157,7 @@ const FooterSection = () => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span>
-                  123 Tech Lane, Suite 500
-                  <br />
-                  San Francisco, CA 94107
-                </span>
+                <span>Candelaria, Quezon</span>
               </li>
             </ul>
           </div>

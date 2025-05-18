@@ -54,19 +54,19 @@ export default function Navbar() {
             Home
           </Link>
           <Link
-            href="/company"
+            href="#about"
             className="text-gray-700 hover:text-gray-900 font-semibold transition"
           >
             Company
           </Link>
           <Link
-            href="/product"
+            href="#services"
             className="text-gray-700 hover:text-gray-900 font-semibold transition"
           >
             Product
           </Link>
           <Link
-            href="/contact"
+            href="#footer"
             className="bg-[#8A169D] text-white px-6 py-3 rounded-md hover:bg-purple-700 font-semibold transition"
           >
             Contact Us
