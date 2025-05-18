@@ -34,12 +34,11 @@ const FooterSection = () => {
                 height={50}
               />
               <span className="text-2xl font-semibold text-white">
-                Elipsense
+                Ellipsense
               </span>
             </Link>
             <p className="text-gray-400 leading-relaxed">
-              Smart solutions for a digital world. We empower businesses through
-              innovative technology.
+              Let's build your vision together.
             </p>
           </div>
 
