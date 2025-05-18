@@ -5,6 +5,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,8 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     // run on mount to catch initial position (e.g. after reload)
     handleScroll();
+    // Set mounted state for initial animation
+    setMounted(true);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -20,7 +23,8 @@ export default function Navbar() {
     <nav
       className={`
     fixed top-0 left-0 w-full z-50 px-4 md:px-6 py-3
-    transition-all duration-300
+    transition-all duration-500 ease-in-out transform
+    ${mounted ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}
     ${scrolled ? "bg-transparent backdrop-blur-md shadow-md" : "bg-transparent"}
   `}
     >
@@ -29,7 +33,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-3">
           <Link href="/">
             <Image
-              src="/logo.png"
+              src="/logo.svg"
               alt="Your Company Logo"
               width={100}
               height={100}

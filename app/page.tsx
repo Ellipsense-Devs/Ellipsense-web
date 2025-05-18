@@ -4,9 +4,11 @@ import Navbar from "@/components/NavBar";
 import HeroSection from "@/components/sections/HeroSection";
 import InfoSection from "@/components/sections/InfoSection";
 import AboutSection from "@/components/sections/AboutSection";
+import BlankSection from "@/components/sections/BlankSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import CallToActionSection from "@/components/sections/CallToActionSection";
 import FooterSection from "@/components/sections/FooterSection";
+import Services from "@/components/sections/Services";
 
 export default function Home() {
   return (
@@ -17,7 +19,9 @@ export default function Home() {
         <HeroSection />
         <InfoSection />
         <AboutSection />
-        <TestimonialsSection />
+        <Services />
+        <BlankSection />
+        {/* <TestimonialsSection /> */}
         <CallToActionSection />
       </main>
 

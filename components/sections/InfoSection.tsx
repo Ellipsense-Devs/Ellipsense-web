@@ -11,7 +11,7 @@ const InfoSection = () => {
     <AnimatedSection id="info" className="py-20 bg-[#691E75]" threshold={0.2}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-5xl font-bold text-white mb-4">
             Reliable. Scalable. Future-Ready.
           </h2>
         </div>
