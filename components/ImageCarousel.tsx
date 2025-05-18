@@ -32,7 +32,7 @@ const ImageCarousel = ({
 
   // We need at least enough images to fill the visible height plus one more set for seamless looping
   const repeatedImages = [];
-  const currentHeight = 0;
+
   const visibleHeightPx = parseInt(visibleHeight); // Assuming visibleHeight is in px for calculation
 
   // Create a long enough list of images for seamless looping

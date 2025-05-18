@@ -20,8 +20,8 @@ const Services = () => {
           <p className="max-h-0 max-w-2xl overflow-hidden transition-all duration-800 group-hover:max-h-48 mt-4 text-lg text-gray-300">
             Modernize your IT infrastructure with our cloud services. We offer
             cloud migration, deployment, and management solutions that improve
-            flexibility, collaboration, and security—whether you're using AWS,
-            Azure, or Google Cloud.
+            flexibility, collaboration, and security—whether you&apos;re using
+            AWS, Azure, or Google Cloud.
           </p>
         </div>
       </div>

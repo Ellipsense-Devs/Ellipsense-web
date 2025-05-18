@@ -7,7 +7,6 @@ import Image from "next/image";
 
 const VideoSection = () => {
   const [isHovering, setIsHovering] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const cursorX = useSpring(0, {
     stiffness: 1000,
     damping: 50,
@@ -29,10 +28,6 @@ const VideoSection = () => {
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    setMousePosition({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
     cursorX.set(e.clientX - rect.left);
     cursorY.set(e.clientY - rect.top);
   };
