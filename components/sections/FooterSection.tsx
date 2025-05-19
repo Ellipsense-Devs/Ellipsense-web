@@ -108,7 +108,7 @@ const FooterSection = () => {
                   />
                 </svg>
                 <a
-                  href="mailto:info@elipsense.com"
+                  href="mailto:franzeecalleja@gmail.com"
                   className="hover:text-purple-300 transition-colors duration-200"
                 >
                   franzeecalleja@gmail.com
@@ -130,7 +130,7 @@ const FooterSection = () => {
                   />
                 </svg>
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+639946948997"
                   className="hover:text-purple-300 transition-colors duration-200"
                 >
                   +639946948997
