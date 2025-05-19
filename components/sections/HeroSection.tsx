@@ -64,7 +64,7 @@ const HeroSection = () => {
         <div className="max-w-2xl text-left mt-6">
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
             From custom software development to digital transformation,
-            Elipsense Tech Solution is your trusted partner in leveraging
+            Ellipsense Tech Solution is your trusted partner in leveraging
             technology to achieve your business goals.
           </p>
         </div>
