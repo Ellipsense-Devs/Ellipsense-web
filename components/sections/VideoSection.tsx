@@ -107,7 +107,7 @@ const VideoSection = () => {
           {/* Custom Cursor */}
           {isHovering && (
             <motion.div
-              className="pointer-events-none fixed z-50 flex items-center justify-center"
+              className="pointer-events-none absolute z-50 flex items-center justify-center"
               style={{
                 left: cursorX,
                 top: cursorY,
