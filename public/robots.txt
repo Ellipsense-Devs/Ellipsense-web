@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.ellipsense.vercel.app/sitemap.xml
+
+# Block Next.js system files
+Disallow: /_next/
+Disallow: /.next/
+
+# Allow public assets
+Allow: /public/
+Allow: /*.svg
+Allow: /*.png
+Allow: /*.gif
