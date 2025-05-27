@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, ReactNode } from "react";
+import { useState, ReactNode, useEffect, useRef } from "react";
 
 interface FlipCardProps {
   frontIcon: ReactNode;
@@ -18,12 +18,90 @@ const FlipCard = ({
   backContent,
 }: FlipCardProps) => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const cardRef = useRef(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const isFlippingRef = useRef(false);
+
+  // Check for mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // Standard mobile breakpoint
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Mobile scroll-based auto-flip
+  useEffect(() => {
+    if (!isMobile) return; // Only run on mobile
+
+    const handleScroll = () => {
+      if (cardRef.current) {
+        const element = cardRef.current as HTMLElement;
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const centerBuffer = windowHeight * 0.1;
+
+        const fullyVisible =
+          rect.top >= centerBuffer &&
+          rect.bottom <= windowHeight - centerBuffer &&
+          rect.height < windowHeight;
+
+        if (fullyVisible && !isFlipped && !isFlippingRef.current) {
+          isFlippingRef.current = true;
+          timeoutRef.current = setTimeout(() => {
+            setIsFlipped(true);
+            isFlippingRef.current = false;
+          }, 1000);
+        } else if (!fullyVisible && (isFlipped || isFlippingRef.current)) {
+          if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+            timeoutRef.current = null;
+          }
+          isFlippingRef.current = false;
+          setIsFlipped(false);
+        }
+      }
+    };
+
+    // Initial check
+    handleScroll();
+
+    let scrollTimeout: NodeJS.Timeout | null = null;
+    const throttledScroll = () => {
+      if (!scrollTimeout) {
+        scrollTimeout = setTimeout(() => {
+          handleScroll();
+          scrollTimeout = null;
+        }, 50);
+      }
+    };
+
+    window.addEventListener("scroll", throttledScroll);
+
+    return () => {
+      window.removeEventListener("scroll", throttledScroll);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+    };
+  }, [isFlipped, isMobile]);
 
   return (
     <div
+      ref={cardRef}
       className="flip-card h-[24rem] w-full perspective-1000"
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
+      {...(!isMobile && {
+        onMouseEnter: () => setIsFlipped(true),
+        onMouseLeave: () => setIsFlipped(false),
+      })}
     >
       <div
         className={`flip-card-inner relative w-full h-full transition-transform duration-700 transform-style-3d ${
