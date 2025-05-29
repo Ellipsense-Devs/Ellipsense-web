@@ -82,10 +82,8 @@ const VideoSection = () => {
         >
           Watch the Video
         </motion.button>
-      </div>
-
-      {/* Video Container with increased z-index */}
-      <div className="max-w-4xl mx-auto relative aspect-video z-10">
+      </div>      {/* Video Container with increased z-index */}
+      <div className="max-w-4xl mx-2.5 sm:mx-auto relative aspect-video z-10">
         <div
           className="absolute inset-0 cursor-none"
           onClick={handleVideoClick}
