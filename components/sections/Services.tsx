@@ -131,8 +131,8 @@ const Services = () => {
   return (
     <div>
       {services.map((service, index) => (
-        <div
-          key={index}
+        <div key={index}
+          id={service.title.toLowerCase().replace(/ /g, '-')}
           ref={(el: HTMLDivElement | null) => { sectionsRef.current[index] = el }}
           className={`group overflow-hidden ${service.bgClass} transition-all duration-800 relative ${!isMobile && hoveredSection === index ? 'scale-[1.02]' : 'scale-100'
             }`}

@@ -12,12 +12,11 @@ const FooterSection = () => {
     { href: "/#info", label: "Mission" },
     { href: "/#services", label: "Services" },
   ];
-
   const servicesLinks = [
-    { href: "/", label: "Custom Development" }, // Example actual links
-    { href: "/", label: "Web Applications" },
-    { href: "/", label: "Mobile Solutions" },
-    { href: "/", label: "Digital Strategy" },
+    { href: "/#cloud-services", label: "Cloud Services" },
+    { href: "/#custom-software-development", label: "Custom Software Development" },
+    { href: "/#web-and-mobile-development", label: "Web & Mobile Development" },
+    { href: "/#managed-it-support", label: "Managed IT Support" }
   ];
 
   return (
